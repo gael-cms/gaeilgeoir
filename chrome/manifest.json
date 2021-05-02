@@ -1,0 +1,20 @@
+{
+  "name": "Gaeilgeoir",
+  "description": "Website translator",
+  "version": "0.1",
+  "manifest_version": 3,
+  "background": {},
+  "permissions": [
+    "webNavigation",
+    "storage"
+  ],
+  "storage": {
+    "managed_schema": "schema.json"
+  },
+  "content_scripts":[
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js":["background.js"]
+    }
+  ]
+}

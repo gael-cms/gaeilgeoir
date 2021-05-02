@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "translations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "en": { "type": "string" },
+          "ga": { "type": "string" }
+        }
+      }
+    }
+  }
+}
