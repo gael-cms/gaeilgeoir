@@ -3,9 +3,23 @@
   "description": "Translates a curated list of websites to Irish",
   "version": "0.1",
   "manifest_version": 3,
-  "background": {},
+  "action": {
+    "default_title": "Enable/Disable",
+    "default_icon": {
+      "16":"images/icon16.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
   "permissions": [
-    "webNavigation"
+    "webNavigation",
+    "storage",
+    "tabs"
   ],
   "content_scripts":[
     {
