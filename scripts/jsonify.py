@@ -1,5 +1,6 @@
 #!/usr/local/bin/python3
 
+import json
 import pandas as pd
 import sys
 
@@ -16,6 +17,13 @@ else:
 df = pd.read_csv (filename)
 df = df.dropna()
 df.columns = ['en', 'ga']
-print(df)
-df.to_json (r'translations/' + hostname + '.json', orient='records', indent=2, force_ascii=False)
+
+data = df.to_json(orient='records', force_ascii=False)
+data = data.replace('}]', '}\n]')
+data = data.replace('{', '\n  {')
+data = data.replace('\n\n', '\n')
+
+with open('translations/' + hostname + '.json', 'w') as outfile:
+    outfile.write(data)
+
 
