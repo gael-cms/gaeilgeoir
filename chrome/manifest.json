@@ -1,0 +1,16 @@
+{
+  "name": "Gaeilgeoir",
+  "description": "Translates a curated list of websites to Irish",
+  "version": "0.1",
+  "manifest_version": 3,
+  "background": {},
+  "permissions": [
+    "webNavigation"
+  ],
+  "content_scripts":[
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js":["gaeilgeoir.js"]
+    }
+  ]
+}
