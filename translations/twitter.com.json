@@ -1,6 +1,6 @@
 [
  {"en":"Blog","ga":"Blag"},
- {"en":Close","ga":"Dún"},
+ {"en":"Close","ga":"Dún"},
  {"en":"About","ga":"Faoi Twitter"},
  {"en":"Log in","ga":"Logáil isteach"},
  {"en":"Done","ga":"Déanta"},
@@ -12,7 +12,7 @@
  {"en":"Settings","ga":"Socruithe"},
  {"en":"Password","ga":"Pasfhocal"},
  {"en":"Marketing","ga":"Margaíocht"},
- {"en":Directory","ga":"Eolaire"},
+ {"en":"Directory","ga":"Eolaire"},
  {"en":"Developers","ga":"Forbróirí"},
  {"en":"Cookies Use","ga":"Úsáid Fianáin"},
  {"en":"Help Center","ga":"Ionad Cabhrach"},
@@ -24,7 +24,7 @@
  {"en":"Terms of Service","ga":"Tearmaí Seirbhís"},
  {"en":"Forgot password?","ga":"Dearmad ar pasfhocal?"},
  {"en":"Explore","ga":"Féach thart"},
- {"en":Notifications","ga":"Fógraí"},
+ {"en":"Notifications","ga":"Fógraí"},
  {"en":"Messages","ga":"Teachtaireachtaí"},
  {"en":"Bookmarks","ga":"Leabharmharcanna"},
  {"en":"Lists","ga":"Liostaí"},
@@ -40,5 +40,5 @@
  {"en":"Search Twitter","ga":"Cuardaigh Twitter"},
  {"en":"What's happening","ga":"Ceard atá ag tarlú?"},
  {"en":"Trending","ga":"Ag treocht"},
- {"en":"Tweet","ga":"Tvuít"},
+ {"en":"Tweet","ga":"Tvuít"}
 ]
