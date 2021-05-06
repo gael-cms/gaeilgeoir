@@ -31,6 +31,7 @@ const universalTranslations = [
     {"en": "Ad Choices", "ga": "Roghanna Fógraíochta"},
     {"en": "Community Guidelines", "ga": "Treoirlínte Phobail"},
     {"en": "Show More", "ga": "Tuilleadh"},
+    {"en": "Show more", "ga": "Tuilleadh"},
     {"en": "Language", "ga": "Teanga"},
     {"en": "Dark Theme", "ga": "Téama Dorcha"},
     {"en": "Dark Mode", "ga": "Mód Dorcha"},
@@ -51,7 +52,14 @@ const universalTranslations = [
     {"en": "Mute", "ga":"Maothaigh"},
     {"en": "Unmute", "ga":"Dímaothaigh"},
     {"en": "Settings", "ga":"Socruithe"},
-    {"en": "Fullscreen", "ga":"Lánscáileán"}
+    {"en": "Fullscreen", "ga":"Lánscáileán"},
+    {"en": "Help", "ga":"Cabhair"},
+    {"en": "Cookie Policy", "ga":"Ráiteas Fianáin"},
+    {"en": "Privacy Policy", "ga":"Ráiteas Príobháideachas"},
+    {"en": "Security", "ga":"Slandáil"},
+    {"en": "Terms", "ga":"Téarmaí"},
+    {"en": "Terms and Conditions", "ga":"Téarmaí agus Coinníollacha"},
+    {"en": "Terms & Conditions", "ga":"Téarmaí & Coinníollacha"},
 ];
 
 const domain = window.location.hostname.split(".").slice(-2).join(".");

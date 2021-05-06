@@ -6,12 +6,12 @@
   {"en":"Any%","ga":"Aon%"},
   {"en":"Loot Cave - Store","ga":"Loot Cave - Siopa"},
   {"en":"Turbo","ga":"Turba"},
-  {"en":"HELP & LEGAL","ga":"CABHAIR & DLÍ"},
-  {"en":"GENERAL","ga":"GINEARÁLTA"},
+  {"en":"Help & Legal","ga":"Cabhair & Dlí"},
+  {"en":"General","ga":"Ginearálta"},
   {"en":"Live channels","ga":"Cainéil beo"},
   {"en":"Live Channels","ga":"Cainéil Beo"},
   {"en":"Categories","ga":"Catagóirí"},
-  {"en":"we think you'll like","ga":"a thaitneoidh leat"},
+  {"en":"we think you’ll like","ga":"a thaitneoidh leat"},
   {"en":"LIVE","ga":"BEO"},
   {"en":"Games","ga":"Cluichí"},
   {"en":"Music","ga":"Ceol"},
@@ -22,5 +22,8 @@
   {"en":"Viewers (High to Low)","ga":"Breathnóirí (Ord Íslitheach)"},
   {"en":"Viewers (Low to High)","ga":"Breathnóirí (Ord Ardaitheach)\""},
   {"en":"Recently Started","ga":"Tosaithe le Déanaí"},
-  {"en":"New Prime Loot","ga":"'Prime Loot' Nua"}
+  {"en":"New Prime Loot","ga":"'Prime Loot' Nua"},
+  {"en":"Esports","ga":"Ríomhspóirt"},
+  {"en":"Download Apps","ga":"Íoslódáil Aipeanna"},
+  {"en":"Recommended Channels","ga":"Cainéil Molta"}
 ]
