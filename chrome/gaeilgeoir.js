@@ -48,11 +48,7 @@ const universalTranslations = [
     {"en": "Search", "ga":"Cuardach"},
     {"en": "More", "ga":"Tuilleadh"},
     {"en": "Browse", "ga":"Brabhsáil"},
-    {"en": "Play", "ga":"Seinn"},
-    {"en": "Mute", "ga":"Maothaigh"},
-    {"en": "Unmute", "ga":"Dímaothaigh"},
     {"en": "Settings", "ga":"Socruithe"},
-    {"en": "Fullscreen", "ga":"Lánscáileán"},
     {"en": "Help", "ga":"Cabhair"},
     {"en": "Cookie Policy", "ga":"Ráiteas Fianáin"},
     {"en": "Privacy Policy", "ga":"Ráiteas Príobháideachas"},
@@ -60,6 +56,24 @@ const universalTranslations = [
     {"en": "Terms", "ga":"Téarmaí"},
     {"en": "Terms and Conditions", "ga":"Téarmaí agus Coinníollacha"},
     {"en": "Terms & Conditions", "ga":"Téarmaí & Coinníollacha"},
+    {"en": "Close", "ga":"Dún"},
+    {"en": "Quality", "ga":"Caighdeán"},
+    {"en": "Auto", "ga":"Uathchaighdeánú"},
+    {"en": "Share", "ga":"Roinn"},
+    {"en": "Username", "ga":"Ainm Úsáideora"},
+    {"en": "Password", "ga":"Pasfhocal"},
+    {"en": "Confirm Password", "ga":""},
+    {"en": "Trouble logging in?", "ga":"Deachrachtaí logáil isteach?"},
+    {"en": "Connect with Facebook", "ga":"Ceangail le Facebook"},
+    {"en": "Date of Birth", "ga":"Dáta Breithe"},
+    {"en": "Email", "ga":"Ríomhphost"},
+    {"en": "Day", "ga":"Lá"},
+    {"en": "Month", "ga":"Mí"},
+    {"en": "Year", "ga":"Bliain"},
+    {"en": "Share", "ga":"Roinn"},
+
+    {"en": "Log Out", "ga":"Logáil Amach"},
+    {"en": "Edit", "ga":"Cuir in Eagar"},
 ];
 
 const domain = window.location.hostname.split(".").slice(-2).join(".");
@@ -152,7 +166,7 @@ xhttp.onreadystatechange = function() {
 chrome.storage.sync.get(domain, function(result) {
     console.debug("GAEILGEOIR - hostname: " + domain + " read as: " + result[domain]);
     if (result[domain] || result[domain] === undefined) {
-        xhttp.open("GET", "https://raw.githubusercontent.com/soceanainn/Gaeilgeoir/twitch/translations/" + domain + ".json", true);
+        xhttp.open("GET", "https://raw.githubusercontent.com/soceanainn/Gaeilgeoir/main/translations/" + domain + ".json", true);
         xhttp.send();
     }
 });
