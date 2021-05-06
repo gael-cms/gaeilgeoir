@@ -1,81 +1,3 @@
-const universalTranslations = [
-    {"en": "Home", "ga": "Baile"},
-    {"en": "About Me", "ga": "Eolas Fúm"},
-    {"en": "About me", "ga": "Eolas fúm"},
-    {"en": "About", "ga":"Faoi"},
-    {"en": "Info", "ga": "Eolas"},
-    {"en": "More Info", "ga": "Tuilleadh Eolais"},
-    {"en": "Contact", "ga": "Teagmháil"},
-    {"en": "Contact Me", "ga": "Déan Teagmháil Liom"},
-    {"en": "Contact Us", "ga": "Déan Teagmháil Linn"},
-    {"en": "Jobs", "ga": "Postanna"},
-    {"en": "Account", "ga": "Cuntas"},
-    {"en": "Privacy", "ga": "Príobháideachas"},
-    {"en": "Cookie Preferences", ga: "Roghanna Fianáin"},
-    {"en": "Cookies", ga: "Fianáin"},
-    {"en": "Accept Cookies", "ga": "Glac le Fianáin"},
-    {"en": "Manage Cookies", "ga": "Bainistigh Fianáin"},
-    {"en": "Live", "ga":"Beo"},
-    {"en": "Chat", "ga":"Comhrá"},
-    {"en": "Advertisers", "ga": "Fógróirí"},
-    {"en": "Blog", "ga": "Blag"},
-    {"en": "Developer", "ga": "Réalóir"},
-    {"en": "Developers", "ga": "Réalóirí"},
-    {"en": "Gift Card", "ga": "Cárta Bronntanais"},
-    {"en": "Gift Cards", "ga": "Cártaí Bronntanais"},
-    {"en": "Partners", "ga": "Páirtí"},
-    {"en": "Press", "ga": "Preas"},
-    {"en": "Log In", "ga": "Logáil Isteach"},
-    {"en": "Sign Up", "ga": "Cláraigh"},
-    {"en": "Accessibility Statement", "ga": "Ráiteas Inrochtaineachta"},
-    {"en": "Ad Choices", "ga": "Roghanna Fógraíochta"},
-    {"en": "Community Guidelines", "ga": "Treoirlínte Phobail"},
-    {"en": "Show More", "ga": "Tuilleadh"},
-    {"en": "Show more", "ga": "Tuilleadh"},
-    {"en": "Language", "ga": "Teanga"},
-    {"en": "Dark Theme", "ga": "Téama Dorcha"},
-    {"en": "Dark Mode", "ga": "Mód Dorcha"},
-    {"en": "Follow", "ga":"Lean"},
-    {"en": "Videos", "ga":"Físeáin"},
-    {"en": "Clips", "ga":"Gearrthóga"},
-    {"en": "Search Tags", "ga":"Cuardaigh Clibeanna"},
-    {"en": "Trending", "ga":"Treochtú"},
-    {"en": "Sort By", "ga":"Sórtáil De Réir"},
-    {"en": "Recommended For You", "ga":"Molta Duit"},
-    {"en": "Viewers", "ga":"Breathnóirí"},
-    {"en": "Followers", "ga":"Leantóirí"},
-    {"en": "Subscribe", "ga":"Suibscríobh"},
-    {"en": "Search", "ga":"Cuardach"},
-    {"en": "More", "ga":"Tuilleadh"},
-    {"en": "Browse", "ga":"Brabhsáil"},
-    {"en": "Settings", "ga":"Socruithe"},
-    {"en": "Help", "ga":"Cabhair"},
-    {"en": "Cookie Policy", "ga":"Ráiteas Fianáin"},
-    {"en": "Privacy Policy", "ga":"Ráiteas Príobháideachas"},
-    {"en": "Security", "ga":"Slandáil"},
-    {"en": "Terms", "ga":"Téarmaí"},
-    {"en": "Terms and Conditions", "ga":"Téarmaí agus Coinníollacha"},
-    {"en": "Terms & Conditions", "ga":"Téarmaí & Coinníollacha"},
-    {"en": "Close", "ga":"Dún"},
-    {"en": "Quality", "ga":"Caighdeán"},
-    {"en": "Auto", "ga":"Uathchaighdeánú"},
-    {"en": "Share", "ga":"Roinn"},
-    {"en": "Username", "ga":"Ainm Úsáideora"},
-    {"en": "Password", "ga":"Pasfhocal"},
-    {"en": "Confirm Password", "ga":""},
-    {"en": "Trouble logging in?", "ga":"Deachrachtaí logáil isteach?"},
-    {"en": "Connect with Facebook", "ga":"Ceangail le Facebook"},
-    {"en": "Date of Birth", "ga":"Dáta Breithe"},
-    {"en": "Email", "ga":"Ríomhphost"},
-    {"en": "Day", "ga":"Lá"},
-    {"en": "Month", "ga":"Mí"},
-    {"en": "Year", "ga":"Bliain"},
-    {"en": "Share", "ga":"Roinn"},
-
-    {"en": "Log Out", "ga":"Logáil Amach"},
-    {"en": "Edit", "ga":"Cuir in Eagar"},
-];
-
 const domain = window.location.hostname.split(".").slice(-2).join(".");
 const mutationObserverConfig = { childList: true, subtree: true };
 
@@ -93,24 +15,24 @@ function filterNodes(node){
     return node.textContent.trim() !== "" && ! ['SCRIPT', 'STYLE'].includes(node.parentElement.tagName);
 }
 
-function translate(el){
-    let walk = document.createTreeWalker(el,NodeFilter.SHOW_TEXT, null,false);
+function translate(element){
+    let walk = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null,false);
     while(walk.nextNode())
         if (filterNodes(walk.currentNode))
            processTextNode(walk.currentNode);
 }
 
-function processTextNode(abc){
-    const sentences = toSentences(abc.nodeValue);
+function processTextNode(node){
+    const sentences = toSentences(node.nodeValue);
     const translatedSentences = [];
 
-    sentences.forEach(abc => translatedSentences.push(maybeConvertSentence(abc.trim())));
+    sentences.forEach(sentence => translatedSentences.push(maybeConvertSentence(sentence.trim())));
 
     let output = translatedSentences.join(" ");
-    if (leftTrim(abc.nodeValue).length !== abc.nodeValue.length) output = " " + output;
-    if (rightTrim(abc.nodeValue).length !== abc.nodeValue.length) output += " ";
+    if (leftTrim(node.nodeValue).length !== node.nodeValue.length) output = " " + output;
+    if (rightTrim(node.nodeValue).length !== node.nodeValue.length) output += " ";
 
-    abc.nodeValue = output
+    node.nodeValue = output
 }
 
 function maybeConvertSentence(sentence){
@@ -127,19 +49,6 @@ function maybeConvertSentence(sentence){
 function startTranslation(){
     mutationObserver.observe(document.body, mutationObserverConfig);
     translate(document.body);
-}
-
-function exportTranslations(){
-    const link = document.createElement('a');
-    let exportData = 'data:text/csv;charset=utf-8,';
-
-    exportData += 'Béarla,Gaeilge\n';
-    siteTranslations.forEach(t => exportData += '"' + t.en +'", "' + t.ga + '"\n');
-    Array.from(unseenTranslations).sort((a,b) => a.length - b.length).forEach(t => exportData += '"' + t +'"\n');
-
-    link.download = domain + ".csv";
-    link.href = encodeURI(exportData);
-    link.click();
 }
 
 const mutationObserver = new MutationObserver(function(mutations) {
