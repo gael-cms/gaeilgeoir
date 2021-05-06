@@ -5,6 +5,7 @@ const universalTranslations = [
   {"en": "About", "ga":"Eolas"},
   {"en": "Info", "ga": "Eolas"},
   {"en": "More Info", "ga": "Tuilleadh Eolais"},
+  {"en": "More info", "ga": "Tuilleadh eolais"},
   {"en": "Contact", "ga": "Teagmháil"},
   {"en": "Contact Me", "ga": "Déan Teagmháil Liom"},
   {"en": "Contact Us", "ga": "Déan Teagmháil Linn"},
@@ -74,5 +75,9 @@ const universalTranslations = [
   {"en": "Log Out", "ga":"Logáil Amach"},
   {"en": "Edit", "ga":"Cuir in Eagar"},
   {"en": "Sign up", "ga":"Cláraigh"},
-  {"en": "Collapse", "ga":"Leacaigh"}
+  {"en": "Collapse", "ga":"Leacaigh"},
+  {"en": "Help Centre", "ga":"Cabhair"},
+  {"en": "Language", "ga":"Teanga"},
+  {"en": "Save", "ga":"Sábháil"},
+  {"en": "Cancel", "ga":"Cealaigh"},
 ];
