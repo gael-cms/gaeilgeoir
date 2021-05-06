@@ -22,6 +22,7 @@ function updateIcon(tab, isUpdate = true){
     let domain = new URL(url).hostname.split(".").slice(-2).join(".");
     chrome.storage.sync.get(domain, function(result) {
         console.debug("HOSTNAME: " + domain + " read as: " + result[domain]);
+        if (result[domain] === undefined) result[domain] = true;
         if (isUpdate){
             chrome.storage.sync.set({[domain]: !result[domain]}, function(){
                 console.debug("HOSTNAME: " + domain + " updated to: " + !result[domain]);

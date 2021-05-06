@@ -1,7 +1,7 @@
 {
   "name": "Gaeilgeoir",
   "description": "Translates a curated list of websites to Irish",
-  "version": "0.1",
+  "version": "0.1.0",
   "manifest_version": 3,
   "action": {
     "default_title": "Enable/Disable",
@@ -20,14 +20,13 @@
     "128": "images/icon128.png"
   },
   "permissions": [
-    "webNavigation",
     "storage",
     "tabs"
   ],
   "content_scripts":[
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js":["gaeilgeoir.js"]
+      "matches": [ "http://*/*", "https://*/*" ],
+      "js":[ "universal_translations.js", "gaeilgeoir.js", "export_tranlsations.js" ]
     }
   ]
 }

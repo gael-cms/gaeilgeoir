@@ -25,5 +25,3 @@ data = data.replace('\n\n', '\n')
 
 with open('translations/' + hostname + '.json', 'w') as outfile:
     outfile.write(data)
-
-
