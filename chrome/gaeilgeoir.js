@@ -1,8 +1,8 @@
 const universalTranslations = [
-    // General - Ginearálta
     {"en": "Home", "ga": "Baile"},
     {"en": "About Me", "ga": "Eolas Fúm"},
     {"en": "About me", "ga": "Eolas fúm"},
+    {"en": "About", "ga":"Faoi"},
     {"en": "Info", "ga": "Eolas"},
     {"en": "More Info", "ga": "Tuilleadh Eolais"},
     {"en": "Contact", "ga": "Teagmháil"},
@@ -12,7 +12,46 @@ const universalTranslations = [
     {"en": "Account", "ga": "Cuntas"},
     {"en": "Privacy", "ga": "Príobháideachas"},
     {"en": "Cookie Preferences", ga: "Roghanna Fianáin"},
-    {"en": "Cookies", ga: "Fianáin"}
+    {"en": "Cookies", ga: "Fianáin"},
+    {"en": "Accept Cookies", "ga": "Glac le Fianáin"},
+    {"en": "Manage Cookies", "ga": "Bainistigh Fianáin"},
+    {"en": "Live", "ga":"Beo"},
+    {"en": "Chat", "ga":"Comhrá"},
+    {"en": "Advertisers", "ga": "Fógróirí"},
+    {"en": "Blog", "ga": "Blag"},
+    {"en": "Developer", "ga": "Réalóir"},
+    {"en": "Developers", "ga": "Réalóirí"},
+    {"en": "Gift Card", "ga": "Cárta Bronntanais"},
+    {"en": "Gift Cards", "ga": "Cártaí Bronntanais"},
+    {"en": "Partners", "ga": "Páirtí"},
+    {"en": "Press", "ga": "Preas"},
+    {"en": "Log In", "ga": "Logáil Isteach"},
+    {"en": "Sign Up", "ga": "Cláraigh"},
+    {"en": "Accessibility Statement", "ga": "Ráiteas Inrochtaineachta"},
+    {"en": "Ad Choices", "ga": "Roghanna Fógraíochta"},
+    {"en": "Community Guidelines", "ga": "Treoirlínte Phobail"},
+    {"en": "Show More", "ga": "Tuilleadh"},
+    {"en": "Language", "ga": "Teanga"},
+    {"en": "Dark Theme", "ga": "Téama Dorcha"},
+    {"en": "Dark Mode", "ga": "Mód Dorcha"},
+    {"en": "Follow", "ga":"Lean"},
+    {"en": "Videos", "ga":"Físeáin"},
+    {"en": "Clips", "ga":"Gearrthóga"},
+    {"en": "Search Tags", "ga":"Cuardaigh Clibeanna"},
+    {"en": "Trending", "ga":"Treochtú"},
+    {"en": "Sort By", "ga":"Sórtáil De Réir"},
+    {"en": "Recommended For You", "ga":"Molta Duit"},
+    {"en": "Viewers", "ga":"Breathnóirí"},
+    {"en": "Followers", "ga":"Leantóirí"},
+    {"en": "Subscribe", "ga":"Suibscríobh"},
+    {"en": "Search", "ga":"Cuardach"},
+    {"en": "More", "ga":"Tuilleadh"},
+    {"en": "Browse", "ga":"Brabhsáil"},
+    {"en": "Play", "ga":"Seinn"},
+    {"en": "Mute", "ga":"Maothaigh"},
+    {"en": "Unmute", "ga":"Dímaothaigh"},
+    {"en": "Settings", "ga":"Socruithe"},
+    {"en": "Fullscreen", "ga":"Lánscáileán"}
 ];
 
 const domain = window.location.hostname.split(".").slice(-2).join(".");
@@ -73,7 +112,7 @@ function exportTranslations(){
     let exportData = 'data:text/csv;charset=utf-8,';
 
     exportData += 'Béarla,Gaeilge\n';
-    siteTranslations.forEach(t => exportData += '"' + t.en +'","' + t.ga + '"\n');
+    siteTranslations.forEach(t => exportData += '"' + t.en +'", "' + t.ga + '"\n');
     Array.from(unseenTranslations).sort((a,b) => a.length - b.length).forEach(t => exportData += '"' + t +'"\n');
 
     link.download = domain + ".csv";
@@ -105,7 +144,7 @@ xhttp.onreadystatechange = function() {
 chrome.storage.sync.get(domain, function(result) {
     console.debug("GAEILGEOIR - hostname: " + domain + " read as: " + result[domain]);
     if (result[domain] || result[domain] === undefined) {
-        xhttp.open("GET", "https://raw.githubusercontent.com/soceanainn/Gaeilgeoir/main/translations/" + domain + ".json", true);
+        xhttp.open("GET", "https://raw.githubusercontent.com/soceanainn/Gaeilgeoir/twitch/translations/" + domain + ".json", true);
         xhttp.send();
     }
 });
