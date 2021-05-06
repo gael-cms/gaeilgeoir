@@ -72,5 +72,7 @@ const universalTranslations = [
   {"en": "Year", "ga":"Bliain"},
   {"en": "Share", "ga":"Roinn"},
   {"en": "Log Out", "ga":"Logáil Amach"},
-  {"en": "Edit", "ga":"Cuir in Eagar"}
+  {"en": "Edit", "ga":"Cuir in Eagar"},
+  {"en": "Sign up", "ga":"Cláraigh"},
+  {"en": "Collapse", "ga":"Leacaigh"}
 ];
