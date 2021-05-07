@@ -1,10 +1,11 @@
-const universalTranslations = [
+[
   {"en": "Home", "ga": "Baile"},
   {"en": "About Me", "ga": "Eolas Fúm"},
   {"en": "About me", "ga": "Eolas fúm"},
   {"en": "About", "ga":"Eolas"},
   {"en": "Info", "ga": "Eolas"},
   {"en": "More Info", "ga": "Tuilleadh Eolais"},
+  {"en": "More info", "ga": "Tuilleadh eolais"},
   {"en": "Contact", "ga": "Teagmháil"},
   {"en": "Contact Me", "ga": "Déan Teagmháil Liom"},
   {"en": "Contact Us", "ga": "Déan Teagmháil Linn"},
@@ -26,6 +27,7 @@ const universalTranslations = [
   {"en": "Partners", "ga": "Páirtí"},
   {"en": "Press", "ga": "Preas"},
   {"en": "Log In", "ga": "Logáil Isteach"},
+  {"en": "Log in", "ga": "Logáil isteach"},
   {"en": "Sign Up", "ga": "Cláraigh"},
   {"en": "Accessibility Statement", "ga": "Ráiteas Inrochtaineachta"},
   {"en": "Ad Choices", "ga": "Roghanna Fógraíochta"},
@@ -74,5 +76,9 @@ const universalTranslations = [
   {"en": "Log Out", "ga":"Logáil Amach"},
   {"en": "Edit", "ga":"Cuir in Eagar"},
   {"en": "Sign up", "ga":"Cláraigh"},
-  {"en": "Collapse", "ga":"Leacaigh"}
-];
+  {"en": "Collapse", "ga":"Leacaigh"},
+  {"en": "Help Centre", "ga":"Cabhair"},
+  {"en": "Language", "ga":"Teanga"},
+  {"en": "Save", "ga":"Sábháil"},
+  {"en": "Cancel", "ga":"Cealaigh"}
+]
