@@ -4,13 +4,6 @@ const mutationObserverConfig = { childList: true, subtree: true };
 let siteTranslations = [];
 const unseenTranslations = new Set();
 
-function toSentences(text){
-    return text.replace(/(\.+|\:|\!|\?)(\"*|\'*|\)*|}*|]*)(\s|\n|\r|\r\n)/gm, "$1$2|").split("|").filter(str => str.trim() !== "");
-}
-
-function leftTrim(str) { return str.replace(/^\s+/,"");}
-function rightTrim(str) { return str.replace(/\s+$/,"");}
-
 function filterNodes(node){
     return node.textContent.trim() !== "" && ! ['SCRIPT', 'STYLE'].includes(node.parentElement.tagName);
 }
@@ -23,27 +16,21 @@ function translate(element){
 }
 
 function processTextNode(node){
-    const sentences = toSentences(node.nodeValue);
-    const translatedSentences = [];
-
-    sentences.forEach(sentence => translatedSentences.push(maybeConvertSentence(sentence.trim())));
-
-    let output = translatedSentences.join(" ");
-    if (leftTrim(node.nodeValue).length !== node.nodeValue.length) output = " " + output;
-    if (rightTrim(node.nodeValue).length !== node.nodeValue.length) output += " ";
-
-    node.nodeValue = output
+    const maybeTranslationRule = findTranslationRule(node.nodeValue);
+    if (maybeTranslationRule !== null){
+        node.nodeValue = node.nodeValue.replace(maybeTranslationRule.en, maybeTranslationRule.ga);
+    }
 }
 
-function maybeConvertSentence(sentence){
-    const maybeSiteTranslation = siteTranslations.find(t => t.en === sentence);
-    if (maybeSiteTranslation) return maybeSiteTranslation.ga;
+function findTranslationRule(term){
+    const maybeSiteTranslation = siteTranslations.find(t => t.en === term);
+    if (maybeSiteTranslation) return maybeSiteTranslation;
 
-    const maybeUniversalTranslation = universalTranslations.find(t => t.en === sentence);
-    if (maybeUniversalTranslation) return maybeUniversalTranslation.ga;
+    const maybeUniversalTranslation = universalTranslations.find(t => t.en === term);
+    if (maybeUniversalTranslation) return maybeUniversalTranslation;
 
-    unseenTranslations.add(sentence);
-    return sentence;
+    unseenTranslations.add(term);
+    return null;
 }
 
 function startTranslation(){
