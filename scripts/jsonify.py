@@ -16,7 +16,7 @@ else:
 
 df = pd.read_csv (filename)
 df = df.dropna()
-df.columns = ['en', 'ga']
+df.columns = ['en', 'ga', 'context']
 
 data = df.to_json(orient='records', force_ascii=False)
 data = data.replace('}]', '}\n]')
