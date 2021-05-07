@@ -16,7 +16,7 @@ function translate(element){
 }
 
 function processTextNode(node){
-    const maybeTranslationRule = findTranslationRule(node.nodeValue);
+    const maybeTranslationRule = findTranslationRule(node.nodeValue.trim());
     if (maybeTranslationRule !== null){
         node.nodeValue = node.nodeValue.replace(maybeTranslationRule.en, maybeTranslationRule.ga);
     }
