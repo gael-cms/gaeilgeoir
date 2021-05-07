@@ -41,3 +41,23 @@ chrome.action.onClicked.addListener(updateIcon);
 chrome.runtime.onMessage.addListener((message, sender) => {
     if (message.pageLoad) updateIcon(sender.tab, false);
 });
+
+function updateUniversalTranslationCache(){
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        try {
+            if (this.readyState === 4 && this.status === 200) {
+                chrome.storage.local.set(cache, JSON.parse(xhttp.responseText));
+            } else if (this.readyState === 4) {
+                console.log('GAEILGEOIR - ERROR - request for universal translations failed with status: ' + this.status + ', response text: ' + this.responseText)
+            }
+        } catch (err){
+            console.error("GAEILGEOIR - Error updating universal translation cache: " + err);
+        }
+    };
+    xhttp.open("GET", "https://raw.githubusercontent.com/soceanainn/Gaeilgeoir/load-universal-rules-from-remote-source/translations/universal.json", true);
+    xhttp.send();
+}
+
+updateUniversalTranslationCache();
+setInterval(updateUniversalTranslationCache, 60 * 60 * 1000);

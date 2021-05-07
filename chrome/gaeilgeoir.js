@@ -1,7 +1,7 @@
 const domain = window.location.hostname.split(".").slice(-2).join(".");
 const mutationObserverConfig = { childList: true, subtree: true };
 
-let siteTranslations = [];
+let siteTranslations = [], universalTranslations = [];
 const unseenTranslations = new Set();
 
 function filterNodes(node){
@@ -16,7 +16,7 @@ function translate(element){
 }
 
 function processTextNode(node){
-    const maybeTranslationRule = findTranslationRule(node.nodeValue);
+    const maybeTranslationRule = findTranslationRule(node.nodeValue.trim());
     if (maybeTranslationRule !== null){
         node.nodeValue = node.nodeValue.replace(maybeTranslationRule.en, maybeTranslationRule.ga);
     }
@@ -31,6 +31,13 @@ function findTranslationRule(term){
 
     unseenTranslations.add(term);
     return null;
+}
+
+function readUniversalTranslations(callback){
+    chrome.storage.local.get(cache, function(result){
+        universalTranslations = result.cache;
+        callback();
+    });
 }
 
 function startTranslation(){
@@ -48,11 +55,10 @@ const xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     try {
         if (this.readyState === 4 && this.status === 200) {
-            // Typical action to be performed when the document is ready:
             siteTranslations = JSON.parse(xhttp.responseText);
-            startTranslation();
+            readUniversalTranslations(startTranslation());
         } else if (this.readyState === 4) {
-            startTranslation();
+            readUniversalTranslations(startTranslation());
         }
     } catch (err){
         console.error("GAEILGEOIR - Error with Gaeilgeoir extension: " + err);
