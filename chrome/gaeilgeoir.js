@@ -105,7 +105,7 @@ xhttp.onreadystatechange = function() {
 chrome.storage.sync.get(domain, function(result) {
     console.debug("GAEILGEOIR - hostname: " + domain + " read as: " + result[domain]);
     if (result[domain] || result[domain] === undefined) {
-        xhttp.open("GET", "https://raw.githubusercontent.com/EmmaD194/Gaeilgeoir/main/translations/" + domain + ".json", true);
+        xhttp.open("GET", "https://raw.githubusercontent.com/soceanainn/Gaeilgeoir/main/translations/" + domain + ".json", true);
         xhttp.send();
     }
 });
