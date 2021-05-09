@@ -1,14 +1,14 @@
 {
   "name": "Gaeilgeoir",
   "description": "Translates a curated list of websites to Irish",
-  "version": "0.1",
+  "version": "0.1.2",
   "manifest_version": 3,
   "action": {
     "default_title": "Enable/Disable",
     "default_icon": {
-      "16":"images/icon16.png",
-      "48": "images/icon48.png",
-      "128": "images/icon128.png"
+      "16": "images/icon16-inactive.png",
+      "48": "images/icon48-inactive.png",
+      "128": "images/icon128-inactive.png"
     }
   },
   "background": {
@@ -19,15 +19,11 @@
     "48": "images/icon48.png",
     "128": "images/icon128.png"
   },
-  "permissions": [
-    "webNavigation",
-    "storage",
-    "tabs"
-  ],
-  "content_scripts":[
+  "permissions": ["storage", "tabs"],
+  "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js":["gaeilgeoir.js"]
+      "js": ["gaeilgeoir.js", "export_translations.js"]
     }
   ]
 }

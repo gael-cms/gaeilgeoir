@@ -16,7 +16,7 @@ else:
 
 df = pd.read_csv (filename)
 df = df.dropna()
-df.columns = ['en', 'ga']
+df.columns = ['en', 'ga', 'context']
 
 data = df.to_json(orient='records', force_ascii=False)
 data = data.replace('}]', '}\n]')
@@ -24,6 +24,4 @@ data = data.replace('{', '\n  {')
 data = data.replace('\n\n', '\n')
 
 with open('translations/' + hostname + '.json', 'w') as outfile:
-    outfile.write(data)
-
-
+    outfile.write(data + '\n')

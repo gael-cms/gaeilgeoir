@@ -22,6 +22,7 @@ function updateIcon(tab, isUpdate = true){
     let domain = new URL(url).hostname.split(".").slice(-2).join(".");
     chrome.storage.sync.get(domain, function(result) {
         console.debug("HOSTNAME: " + domain + " read as: " + result[domain]);
+        if (result[domain] === undefined) result[domain] = true;
         if (isUpdate){
             chrome.storage.sync.set({[domain]: !result[domain]}, function(){
                 console.debug("HOSTNAME: " + domain + " updated to: " + !result[domain]);
@@ -40,3 +41,20 @@ chrome.action.onClicked.addListener(updateIcon);
 chrome.runtime.onMessage.addListener((message, sender) => {
     if (message.pageLoad) updateIcon(sender.tab, false);
 });
+
+function updateUniversalTranslationCache() {
+    fetch("https://raw.githubusercontent.com/soceanainn/Gaeilgeoir/main/translations/universal.json")
+        .then(function (response) {
+            if (response.status !== 200) {
+                console.error('GAEILGEOIR - request for universal translations failed with status: ' + response.status);
+                return;
+            }
+
+            response.json().then(function (data) {
+                chrome.storage.local.set({cache: data});
+            });
+        });
+}
+
+updateUniversalTranslationCache();
+setInterval(updateUniversalTranslationCache, 24 * 60 * 60 * 1000);
