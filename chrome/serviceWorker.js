@@ -71,8 +71,8 @@ chrome.contextMenus.removeAll(function(){
         id: 'about',
         title: 'More info'
     }, function(){
-        chrome.contextMenus.onClicked.addListener(function(info, tab) {
-            if (info.menuItemId === 'about') chrome.tabs.sendMessage(tab.id, {"showDocs": true});
+        chrome.contextMenus.onClicked.addListener(function(info) {
+            if (info.menuItemId === 'about') chrome.tabs.create({ active: true, url: 'https://soceanainn.github.io/gaeilgeoir/' });
         });
     });
     chrome.contextMenus.create({
@@ -80,8 +80,8 @@ chrome.contextMenus.removeAll(function(){
         id: 'support',
         title: 'Support this project'
     }, function(){
-        chrome.contextMenus.onClicked.addListener(function(info, tab) {
-            if (info.menuItemId === 'support') chrome.tabs.sendMessage(tab.id, {"support": true});
+        chrome.contextMenus.onClicked.addListener(function(info) {
+            if (info.menuItemId === 'support') chrome.tabs.create({ active: true, url: 'https://www.buymeacoffee.com/soceanainn' });
         });
     });
 });

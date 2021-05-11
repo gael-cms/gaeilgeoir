@@ -23,7 +23,7 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["gaeilgeoir.js", "contextMenuHandler.js"]
+      "js": ["gaeilgeoir.js", "exportTranslations.js"]
     }
   ]
 }
