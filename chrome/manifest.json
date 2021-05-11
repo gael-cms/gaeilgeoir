@@ -1,7 +1,7 @@
 {
   "name": "Gaeilgeoir",
-  "description": "Translates a curated list of websites to Irish",
-  "version": "0.1.2",
+  "description": "A Google Chrome extension to translate website contents into Irish",
+  "version": "0.2.0",
   "manifest_version": 3,
   "action": {
     "default_title": "Enable/Disable",
@@ -12,18 +12,18 @@
     }
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "serviceWorker.js"
   },
   "icons": {
     "16": "images/icon16.png",
     "48": "images/icon48.png",
     "128": "images/icon128.png"
   },
-  "permissions": ["storage", "tabs"],
+  "permissions": ["storage", "tabs", "contextMenus"],
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["gaeilgeoir.js", "export_translations.js"]
+      "js": ["gaeilgeoir.js", "exportTranslations.js"]
     }
   ]
 }

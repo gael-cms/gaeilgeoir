@@ -7,6 +7,10 @@ function exportTranslations(){
     Array.from(unseenTranslations).sort((a,b) => a.length - b.length).forEach(t => exportData += '"' + t +'"\n');
 
     link.download = domain + ".csv";
-    link.href = encodeURI(exportData);
+    link.href = encodeURI(exportData).replace(/#/g, '%23');
     link.click();
 }
+
+chrome.runtime.onMessage.addListener(function (message) {
+    if (message.exportTranslations) exportTranslations();
+});
