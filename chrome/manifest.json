@@ -1,6 +1,6 @@
 {
   "name": "Gaeilgeoir",
-  "description": "Translates a curated list of websites to Irish",
+  "description": "A Google Chrome extension to translate website contents into Irish",
   "version": "0.2.0",
   "manifest_version": 3,
   "action": {
