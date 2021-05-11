@@ -4,9 +4,14 @@ function exportTranslations(){
 
     exportData += 'Béarla,Gaeilge,Comhthéacs\n';
     siteTranslations.forEach(t => exportData += '"' + t.en +'", "' + t.ga + (t.context ? '", "' + t.context : '') + '"\n');
-    Array.from(unseenTranslations).sort((a,b) => a.length - b.length).forEach(t => exportData += '"' + t +'"\n');
+    Array.from(unseenTranslations).sort((a,b) => a.length - b.length).forEach(t => exportData += '"' + t.trim() +'"\n');
 
     link.download = domain + ".csv";
-    link.href = encodeURI(exportData);
+    link.href = encodeURI(exportData).replace(/#/g, '%23');
     link.click();
 }
+
+chrome.runtime.onMessage.addListener(function (message) {
+    console.log(message);
+    if (message.exportTranslations) exportTranslations();
+});

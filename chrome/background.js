@@ -56,5 +56,21 @@ function updateUniversalTranslationCache() {
         });
 }
 
+chrome.contextMenus.removeAll(function(){
+    chrome.contextMenus.create({
+        contexts: ['page'],
+        id: 'download_translations',
+        title: 'Download translation template file'
+    }, function(){
+        chrome.contextMenus.onClicked.addListener(function(info, tab) {
+            console.log("CONTEXT MENU CLICK");
+            console.log("MENU ITEM ID: " + info.menuItemId);
+            console.log("MY ID: " + 'download_translations');
+
+            if (info.menuItemId === 'download_translations') chrome.tabs.sendMessage(tab.id, {"exportTranslations": true});
+        });
+    });
+});
+
 updateUniversalTranslationCache();
 setInterval(updateUniversalTranslationCache, 24 * 60 * 60 * 1000);
