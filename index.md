@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+*Is féidir Gaeilgeoir a suiteáil [anseo](https://chrome.google.com/webstore/detail/gaeilgeoir/boljhhcnjbdijgbledlnokiianknolel) do Google Chrome*
 
-You can use the [editor on GitHub](https://github.com/soceanainn/Gaeilgeoir/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# Céard é Gaeilgeoir?
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Is 'síneadh' (extension) le haghaidh Google Chrome é Gaeilgeoir a déanann aistriúchán ar shuíomhanna idirlíne.
 
-### Markdown
+## Aidhm Gaeilgeoir
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Is í an aidhm atá ag Gaeilgeoir ná an Ghaeilge a dhéanamh níos feiceálaí i do shaol laethiúl. Déantar seo ar dhá bhealach:
+1. Roinnt aistriúchán a dhéanamh ar gach suíomh a thugann tú cuairt ar. Tá roinnt téarmaí coitianta aistrithe (m.sh `Home -> Baile`) do gach suíomh.
+1. Aistriúchán níos cuimsithí a dhéanamh ar leathanaigh áirithe
 
-```markdown
-Syntax highlighted code block
+# Cur le Gaeilgeoir
 
-# Header 1
-## Header 2
-### Header 3
+Is féidir téarmaí nua a mholadh tríd ríomhphoist a sheoladh [chugam](mailto:seamusoceanainn@gmail.com). 
+Ba chóir comhad Excel (`.csv` nó `.xlsx`) a sheoladh le téarmaí i mBéarla sa chéad colún, agus na aistriúcháin i nGaeilge sa dara cholún. 
+Is féidir comhthéacs a thabhairt sa tríú colún más rud é go bhfuil sé ag teastáil.
+Is féidir athruithe a mholadh díreach tríd [Github](https://github.com/soceanainn/gaeilgeoir) ach oiread, má tá taithí agat leis an suíomh sin agus leis an leagan `json`.
 
-- Bulleted
-- List
+## Gin Teimpléad Aistriúcháin
 
-1. Numbered
-2. List
+Is féidir teimpléad (le liosta na téarmaí Béarla nár aistríodh chomh maith leis na aistriúcháin atá in úsáid) a ghinúint agus a íoslódáil tríd na céimeanna seo a leanas:
+1. Deaschliceáil (right click) ar an deilbhín (icon) don síneadh (ciorcal le 'G' ann).
+1. Brú ar 'Download translations template file'
+1. Athraigh na luachanna sna colúin 'Gaeilge' agus 'Comhthéacs' (má tá comhthéacs ag teastáil), agus seol an comhad uasdátaithe [chugam](mailto:seamusoceanainn@gmail.com).
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/soceanainn/Gaeilgeoir/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+N.B. ag braith ar an suíomh, tá seans go bhfuil roinnt eolas pearsanta sa chomhad a ghintear. **Déan cinnte aon eolas pearsanta a scriosadh roimh an comhad a roinnt.** 
