@@ -12,7 +12,7 @@
     }
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "serviceWorker.js"
   },
   "icons": {
     "16": "images/icon16.png",
@@ -23,7 +23,7 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["gaeilgeoir.js", "export_translations.js"]
+      "js": ["gaeilgeoir.js", "contextMenuHandler.js"]
     }
   ]
 }

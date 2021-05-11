@@ -46,7 +46,7 @@ function updateUniversalTranslationCache() {
     fetch("https://raw.githubusercontent.com/soceanainn/Gaeilgeoir/main/translations/universal.json")
         .then(function (response) {
             if (response.status !== 200) {
-                console.error('GAEILGEOIR - request for universal translations failed with status: ' + response.status);
+                console.error('Request for universal translations failed with status: ' + response.status);
                 return;
             }
 
@@ -63,11 +63,25 @@ chrome.contextMenus.removeAll(function(){
         title: 'Download translation template file'
     }, function(){
         chrome.contextMenus.onClicked.addListener(function(info, tab) {
-            console.log("CONTEXT MENU CLICK");
-            console.log("MENU ITEM ID: " + info.menuItemId);
-            console.log("MY ID: " + 'download_translations');
-
             if (info.menuItemId === 'download_translations') chrome.tabs.sendMessage(tab.id, {"exportTranslations": true});
+        });
+    });
+    chrome.contextMenus.create({
+        contexts: ['action'],
+        id: 'about',
+        title: 'More info'
+    }, function(){
+        chrome.contextMenus.onClicked.addListener(function(info, tab) {
+            if (info.menuItemId === 'about') chrome.tabs.sendMessage(tab.id, {"showDocs": true});
+        });
+    });
+    chrome.contextMenus.create({
+        contexts: ['action'],
+        id: 'support',
+        title: 'Support this project'
+    }, function(){
+        chrome.contextMenus.onClicked.addListener(function(info, tab) {
+            if (info.menuItemId === 'support') chrome.tabs.sendMessage(tab.id, {"support": true});
         });
     });
 });

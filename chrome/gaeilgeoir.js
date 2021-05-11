@@ -63,10 +63,7 @@ function fetchDomainTranslations() {
 }
 
 chrome.storage.sync.get(domain, function(result) {
-    console.debug("GAEILGEOIR - hostname: " + domain + " was read as: " + result[domain]);
-    if (result[domain] || result[domain] === undefined) {
-        fetchDomainTranslations();
-    }
+    if (result[domain] || result[domain] === undefined) fetchDomainTranslations();
 });
 
 chrome.runtime.sendMessage({pageLoad: true});
