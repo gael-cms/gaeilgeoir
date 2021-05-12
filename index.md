@@ -10,6 +10,8 @@ Is í an aidhm atá ag Gaeilgeoir ná an Ghaeilge a dhéanamh níos feiceálaí 
 1. Roinnt aistriúchán a dhéanamh ar gach suíomh a thugann tú cuairt ar. Tá roinnt téarmaí coitianta aistrithe (m.sh `Home -> Baile`) do gach suíomh.
 1. Aistriúchán níos cuimsithí a dhéanamh ar leathanaigh áirithe
 
+Is féidir ráiteas príobháideachais Gaeilgeoir a léamh [anseo](./privacy).
+
 # Cur le Gaeilgeoir
 
 Is féidir téarmaí nua a mholadh tríd ríomhphoist a sheoladh [chugam](mailto:seamusoceanainn@gmail.com). 
@@ -20,7 +22,7 @@ Is féidir athruithe a mholadh díreach tríd [Github](https://github.com/socean
 ## Gin Teimpléad Aistriúcháin
 
 Is féidir teimpléad (le liosta na téarmaí Béarla nár aistríodh chomh maith leis na aistriúcháin atá in úsáid) a ghinúint agus a íoslódáil tríd na céimeanna seo a leanas:
-1. Deaschliceáil (right click) ar an deilbhín (icon) don síneadh (ciorcal le 'G' ann).
+1. Deaschliceáil (right click) aon áit ar an suíomh idirlín.
 1. Brú ar 'Download translation template file'
 1. Athraigh na luachanna sna colúin 'Gaeilge' agus 'Comhthéacs' (má tá comhthéacs ag teastáil), agus seol an comhad uasdátaithe [chugam](mailto:seamusoceanainn@gmail.com).
 
