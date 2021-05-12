@@ -1,7 +1,12 @@
+const actionContext = chrome.runtime.getManifest().manifest_version === 3 ? 'action' : 'browser_action';
+function actionAPI(){ return chrome.runtime.getManifest().manifest_version === 3 ? chrome.action : chrome.browserAction; }
+
 function generateIcon(isEnabled){
     const size = 16;
     const textScaling = 0.8;
-    const canvas = new OffscreenCanvas(size, size);
+    const canvas = document.createElement('canvas');
+    canvas.width  = size;
+    canvas.height = size;
     const context = canvas.getContext('2d');
     context.clearRect(0, 0, size, size);
     context.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2.0);
@@ -27,17 +32,17 @@ function updateIcon(tab, isUpdate = true){
             chrome.storage.sync.set({[domain]: !result[domain]}, function(){
                 console.debug("HOSTNAME: " + domain + " updated to: " + !result[domain]);
                 const imageData = generateIcon(!result[domain]);
-                chrome.action.setIcon({imageData: imageData, tabId: tab.id}, () => { chrome.runtime.lastError });
+                actionAPI().setIcon({imageData: imageData, tabId: tab.id}, () => { chrome.runtime.lastError });
                 chrome.tabs.reload(tab.id);
             });
         } else {
             const imageData = generateIcon(result[domain]);
-            chrome.action.setIcon({imageData: imageData, tabId: tab.id}, () => { chrome.runtime.lastError });
+            actionAPI().setIcon({imageData: imageData, tabId: tab.id}, () => { chrome.runtime.lastError });
         }
     });
 }
 
-chrome.action.onClicked.addListener(updateIcon);
+actionAPI().onClicked.addListener(updateIcon);
 chrome.runtime.onMessage.addListener((message, sender) => {
     if (message.pageLoad) updateIcon(sender.tab, false);
 });
@@ -67,7 +72,7 @@ chrome.contextMenus.removeAll(function(){
         });
     });
     chrome.contextMenus.create({
-        contexts: ['action'],
+        contexts: [ actionContext ],
         id: 'about',
         title: 'More info'
     }, function(){
@@ -76,7 +81,7 @@ chrome.contextMenus.removeAll(function(){
         });
     });
     chrome.contextMenus.create({
-        contexts: ['action'],
+        contexts: [ actionContext ],
         id: 'support',
         title: 'Support this project'
     }, function(){
