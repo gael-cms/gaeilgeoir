@@ -1,8 +1,8 @@
-*Is féidir Gaeilgeoir a suiteáil [anseo](https://chrome.google.com/webstore/detail/gaeilgeoir/boljhhcnjbdijgbledlnokiianknolel) do Google Chrome*
+*Is féidir Gaeilgeoir a suiteáil [anseo](https://chrome.google.com/webstore/detail/gaeilgeoir/boljhhcnjbdijgbledlnokiianknolel) do Google Chrome agus [anseo](https://addons.mozilla.org/ga-IE/firefox/addon/gaeilgeoir) do Firefox*
 
 # Céard é Gaeilgeoir?
 
-Is 'síneadh' (extension) le haghaidh Google Chrome é Gaeilgeoir a déanann aistriúchán ar shuíomhanna idirlíne.
+Is 'síneadh' (extension) le haghaidh Google Chrome / Mozilla Firefox é Gaeilgeoir a déanann aistriúchán ar shuíomhanna idirlíne.
 
 ## Aidhm Gaeilgeoir
 
@@ -25,3 +25,5 @@ Is féidir teimpléad (le liosta na téarmaí Béarla nár aistríodh chomh mait
 1. Athraigh na luachanna sna colúin 'Gaeilge' agus 'Comhthéacs' (má tá comhthéacs ag teastáil), agus seol an comhad uasdátaithe [chugam](mailto:seamusoceanainn@gmail.com).
 
 N.B. ag braith ar an suíomh, tá seans go bhfuil roinnt eolas pearsanta sa chomhad a ghintear. **Déan cinnte aon eolas pearsanta a scriosadh roimh an comhad a roinnt.** 
+
+## [Suíomhanna Tacaithe](./sites) [Ráiteas Príobháideachas](./privacy)
