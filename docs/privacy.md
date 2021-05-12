@@ -7,4 +7,4 @@ The Gaeilgeoir extension has access to the following information:
 
 Although the Gaeilgeoir extension processes your page contents and web history, this is only used for powering the features of the extension. None of your information is visible to the developers of the extension. No user data is stored on the developers side, without exception.
 
-## [Home](../)
+## [Home](./)
