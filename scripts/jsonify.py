@@ -16,7 +16,11 @@ else:
 
 df = pd.read_csv (filename)
 df = df.dropna()
-df.columns = ['en', 'ga', 'context']
+
+if len(df.columns) == 2:
+    df.columns = ['en', 'ga']
+else:
+    df.columns = ['en', 'ga', 'context']
 
 data = df.to_json(orient='records', force_ascii=False)
 data = data.replace('}]', '}\n]')
