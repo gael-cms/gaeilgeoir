@@ -6,4 +6,4 @@
 | netflix.com   | 2021-05-11        | soceanainn        |
 | twitch.tv     | 2021-05-11        | ponxi, soceanainn |
 
-## [Home](../)
+## [Home](./)

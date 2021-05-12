@@ -26,4 +26,5 @@ Is féidir teimpléad (le liosta na téarmaí Béarla nár aistríodh chomh mait
 
 N.B. ag braith ar an suíomh, tá seans go bhfuil roinnt eolas pearsanta sa chomhad a ghintear. **Déan cinnte aon eolas pearsanta a scriosadh roimh an comhad a roinnt.** 
 
-## [Suíomhanna Tacaithe](./sites) [Ráiteas Príobháideachas](./privacy)
+## [Suíomhanna Tacaithe](./sites) 
+## [Ráiteas Príobháideachas](./privacy)
