@@ -1,6 +1,6 @@
 # ![](chrome/images/icon48.png)aeilgeoir 
 
-A Google Chrome extension that transforms a curated list of websites into Irish.
+A web browser extension that transforms a curated list of websites into Irish.
 
 ## Adding Translations
 
@@ -16,10 +16,22 @@ The edited CSV file can then be used to update the files in `translations/` by r
 
 ## Testing Your Changes
 
+To test changes to translation files for site specific translations, you need to push your changes to a fork / branch and update the URL used in `chrome/gaeilgeoir.js` (in the `fetchDomainTranslations` function `fetch` call).
+
+### Chrome
+
 To test local changes to the extension, go to `chrome://extensions/` in your browser.
 
 Click 'Load Unpacked', navigate to the `Gaeilgeoir/chrome` directory and hit 'Select' (Developer Mode most be enabled in the top right of the screen).
 
 To pick up changes you've made locally you must hit the refresh/reload button on the extension card in `chrome://extensions/`.
 
-To test changes to translation files for site specific translations, you need to push your changes to a fork / branch and update the URL used in `chrome/gaeilgeoir.js` (in the `fetchDomainTranslations` function `fetch` call).
+### Firefox
+
+Zip your files so that symbolically linked files are resolved: e.g. `cd firefox/ &&  zip -r firefox.zip * `
+
+Go to `about:debugging#/runtime/this-firefox` in your browser.
+
+Click 'Load Temporary Add-on...', navigate to your zip file directory and hit 'Open'.
+
+To pick up changes you've made locally you must hit the 'Reload' button on the bottom of extension card in `about:debugging#/runtime/this-firefox`.
