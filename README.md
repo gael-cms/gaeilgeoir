@@ -2,6 +2,9 @@
 
 A web browser extension that transforms a curated list of websites into Irish.
 
+Download the extension [here](https://chrome.google.com/webstore/detail/gaeilgeoir/boljhhcnjbdijgbledlnokiianknolel) for Chrome,
+and [here](https://addons.mozilla.org/ga-IE/firefox/addon/gaeilgeoir) for Firefox.
+
 ## Adding Translations
 
 Support for new websites (e.g. `website.com`) can be added directly as a JSON file under `translations/website.com.json`.
