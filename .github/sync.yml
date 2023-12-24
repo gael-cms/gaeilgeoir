@@ -1,5 +1,5 @@
 gael-cms/gael-cms:
-  - source: /docs/
-    dest: /site/extensions/gaeilgeoir/
-  - source: /docs/index.md
-    dest: /site/extensions/gaeilgeoir.md
+  - source: docs/
+    dest: site/extensions/gaeilgeoir/
+  - source: docs/index.md
+    dest: site/extensions/gaeilgeoir.md
