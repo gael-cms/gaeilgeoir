@@ -52,7 +52,7 @@ const mutationObserver = new MutationObserver(function(mutations) {
 });
 
 function fetchDomainTranslations() {
-    fetch("https://raw.githubusercontent.com/soceanainn/Gaeilgeoir/main/translations/" + domain + ".json")
+    fetch("https://raw.githubusercontent.com/gael-cms/Gaeilgeoir/main/translations/" + domain + ".json")
         .then(function (response) {
             if (response.status !== 200) return readUniversalTranslations(startTranslation);
             response.json().then(function (data) {

@@ -1,7 +1,7 @@
 {
   "name": "Gaeilgeoir",
   "description": "A web browser extension to translate website contents into Irish",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "manifest_version": 3,
   "action": {
     "default_title": "Enable/Disable",
