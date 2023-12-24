@@ -1,6 +1,9 @@
 ---
 title: Gaeilgeoir | Privacy Policy
-layout: page
+layout: extension_privacy_policy
+extension_name: Gaeilgeoir
+chrome_link: https://chrome.google.com/webstore/detail/gaeilgeoir/boljhhcnjbdijgbledlnokiianknolel
+firefox_link: https://addons.mozilla.org/ga-IE/firefox/addon/gaeilgeoir
 page_content:
     ga: |-
         # Privacy Policy

@@ -1,5 +1,5 @@
 gael-cms/gael-cms:
-  - source: docs/
-    dest: site/extensions/gaeilgeoir/
   - source: docs/index.md
-    dest: site/extensions/gaeilgeoir.md
+    dest: site/_extensions/gaeilgeoir.md
+  - source: docs/privacy.md
+    dest: site/_extension_privacy_policies/gaeilgeoir.md

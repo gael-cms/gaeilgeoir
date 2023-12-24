@@ -1,10 +1,11 @@
 ---
 title: Gaeilgeoir
-layout: page
+layout: extensions_page
+extension_name: Gaeilgeoir
+chrome_link: https://chrome.google.com/webstore/detail/gaeilgeoir/boljhhcnjbdijgbledlnokiianknolel
+firefox_link: https://addons.mozilla.org/ga-IE/firefox/addon/gaeilgeoir
 page_content:
     ga: |-
-        *Is féidir Gaeilgeoir a suiteáil [anseo](https://chrome.google.com/webstore/detail/gaeilgeoir/boljhhcnjbdijgbledlnokiianknolel) do Google Chrome agus [anseo](https://addons.mozilla.org/ga-IE/firefox/addon/gaeilgeoir) do Firefox*
-        
         # Céard é Gaeilgeoir?
         
         Is 'síneadh' (extension) le haghaidh Google Chrome / Mozilla Firefox é Gaeilgeoir a déanann aistriúchán neamhiomlán ar shuíomhanna idirlíne.
@@ -37,8 +38,6 @@ page_content:
         N.B. ag braith ar an suíomh, tá seans go bhfuil roinnt eolas pearsanta sa chomhad a ghintear. **Déan cinnte aon eolas pearsanta a scriosadh roimh an comhad a roinnt.** 
         
     en: |-
-        *You can download Gaeilgeoir [here](https://chrome.google.com/webstore/detail/gaeilgeoir/boljhhcnjbdijgbledlnokiianknolel) for Google Chrome and [here](https://addons.mozilla.org/ga-IE/firefox/addon/gaeilgeoir) for Firefox*
-        
         # What is Gaeilgeoir?
         
         Gaeilgeoir is an extension for Google Chrome / Mozilla Firefox that provides partial translations for websites.
